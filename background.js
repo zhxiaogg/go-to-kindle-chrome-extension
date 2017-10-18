@@ -1,10 +1,8 @@
-
 chrome.browserAction.onClicked.addListener(function(tab) {
-  console.log(`tab url: ${tab.url}`);
+  chrome.tabs.insertCSS(null, {file: 'readability/pretty.css'});
   chrome.tabs.executeScript(null, {
     file: 'readability/Readability.js'
   }, () => {
-    chrome.tabs.executeScript(null, {file: 'readability/pretty.js'});
-    console.log('ok');
+    chrome.tabs.executeScript(null, {file: 'readability/prettify.js'});
   });
 });

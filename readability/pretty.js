@@ -1,15 +1,10 @@
-var loc = document.location;
-var uri = {
-  spec: loc.href,
-  host: loc.host,
-  prePath: loc.protocol + "//" + loc.host,
-  scheme: loc.protocol.substr(0, loc.protocol.indexOf(":")),
-  pathBase: loc.protocol + "//" + loc.host + loc.pathname.substr(0, loc.pathname.lastIndexOf("/") + 1)
-};
-var article = new Readability(uri, document, {debug: true}).parse();
-if(article && article.content) {
-  // replace original
-  
-}
-console.log(article.title);
-console.log(article.content);
+window.addEventListener("message", ({data, origin}) => {
+  const {title, byline, content, uri}  = data;
+
+  document.getElementById("title").innerText = title;
+  document.getElementById("article-body").innerHTML = content;
+  document.getElementById("byline").innerHTML = byline ? byline : uri.host;
+});
+
+// frame loaded
+window.parent.postMessage("give me my ariticle", "*");
