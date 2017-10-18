@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "gotokindle",
+  "description": "This extension will clear the page to make it more readable, and send it to your kindle as your wish.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "images/icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
