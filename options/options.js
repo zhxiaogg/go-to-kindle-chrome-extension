@@ -25,6 +25,6 @@ document.getElementById("options-form").onsubmit = function(e) {
     clearTipsHandle = setTimeout(() => {
           $("tips").classList.remove("alert-success");
           $("tips").innerText = "";
-    }, 3000)
+    }, 1500)
   });
 };

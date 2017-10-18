@@ -28,5 +28,7 @@ function prettify() {
         form.contentWindow.postMessage(article, "*");
       }
     });
+  } else {
+    console.log("gotokindle: clear page failed.");
   }
 }
