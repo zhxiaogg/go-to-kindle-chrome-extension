@@ -6,3 +6,9 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.tabs.executeScript(null, {file: 'readability/prettify.js'});
   });
 });
+
+chrome.runtime.onMessage.addListener((msg) => {
+  if(msg === "reload") {
+    chrome.tabs.reload();
+  }
+})
