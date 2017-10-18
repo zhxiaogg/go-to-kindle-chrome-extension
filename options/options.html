@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../images/icon.png">
+    <title>options for gotokindle</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="alert" id="tips"></div>
+      <form id="options-form" action="" method="post">
+        <div class="input-group">
+          <label for="mail" class="form-label">Email:</label>
+          <span class="info">
+            note: you need to add <strong>noreply@send.gotokindle.com</strong>
+            as approved personal document e-mail in your amazon account's setting page.
+          </span>
+          <input type="email" id="mail" required class="form-item" name="mail" placeholder="kindle mail address">
+        </div>
+        <div class="input-group">
+          <label for="action" class="form-label">Default action:</label>
+          <select id="action" name="action" class="form-item">
+            <option value="prettify" selected label="Clear the page"></option>
+            <option value="mail" label="Send email"></option>
+          </select>
+        </div>
+        <div class="input-group">
+          <button type="submit" name="save">Save</button>
+        </div>
+      </form>
+    </div>
+    <script src="options.js" charset="utf-8"></script>
+  </body>
+</html>
