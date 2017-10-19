@@ -4,7 +4,7 @@
   "name": "Go To Kindle Chrome Extension",
   "short_name": "Go To Kindle",
   "author": "zhxiaog@outlook.com",
-  "description": "This extension will clear the page to make it more readable, and send it to your kindle as your wish.",
+  "description": "This extension will help you read articles in a clean way both on web and your kindle device.",
   "version": "1.0",
   "browser_action": {
     "default_icon": "images/icon_dark.png"

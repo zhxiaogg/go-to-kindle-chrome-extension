@@ -77,8 +77,8 @@ function _send(mail, url) {
         }
       }
     }
-  }; 
-  xhr.open("GET", `http://gotokindle.com/?url=${url}&mail=${mail}`, true);
+  };
+  xhr.open("GET", `http://gotokindle.com/?url=${encodeURIComponent(url)}&mail=${mail}`, true);
   xhr.send();
 }
 
