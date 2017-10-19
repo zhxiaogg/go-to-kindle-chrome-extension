@@ -1,14 +1,18 @@
 {
   "manifest_version": 2,
 
-  "name": "gotokindle",
+  "name": "Go To Kindle Chrome Extension",
+  "short_name": "Go To Kindle",
+  "author": "zhxiaog@outlook.com",
   "description": "This extension will clear the page to make it more readable, and send it to your kindle as your wish.",
   "version": "1.0",
   "browser_action": {
-    "default_icon": "images/icon.png"
+    "default_icon": "images/icon_dark.png"
   },
   "icons": {
-    "128": "images/icon.png"
+    "48": "images/icon_dark.png",
+    "128": "images/icon_dark_128.png",
+    "256": "images/icon_dark.png"
   },
   "options_ui": {
     "page": "options/options.html",
