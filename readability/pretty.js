@@ -1,8 +1,9 @@
 window.onload = function() {
-
-  document.getElementById("container").onclick = function(e) {
-    console.log(e);
-    chrome.runtime.sendMessage("reload");
+  const container = document.getElementById("container");
+  container.onclick = function(e) {
+    if (e.target === container) {
+        chrome.runtime.sendMessage("reload");
+    }
   };
 
   window.addEventListener("message", ({data, origin}) => {
